@@ -1,21 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- Others link -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- daisyUL -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <main>
-<header></header>
-<body></body>
-<footer></footer>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="m-8">
+      <header></header>
+
+      <body>
+        <!-- main container -->
+        <div class="flex flex-col md:flex-row">
+          <!-- shape card container -->
+          <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <!-- triangle card -->
+            <div class="card card-compact w-56 bg-base-100 shadow-xl">
+              <figure>
+                <img
+                  src="./geometry-genius-resources/images/triangle.png"
+                  alt="triangle"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Triangle</h2>
+                <p class="text-center">Area (A) = 0.5 X b X h</p>
+                <div>
+                  <!-- base -->
+                  <input
+                    id="triangleBase"
+                    class="w-16 p-2 rounded-md"
+                    type="text"
+                    placeholder="b"
+                  />
+                  <span>cm </span>
+                  <!-- hight -->
+                  <input
+                    id="triangleleHight"
+                    class="w-16 p-2 rounded-md"
+                    type="text"
+                    placeholder="h"
+                  />
+                  <span>cm </span>
+                </div>
+                <!-- area calculation result -->
+                <div>
+                  <p>
+                    Area: <span id="triangleAreaResult"> </span> <span>cm</span
+                    ><sup>2</sup>
+                  </p>
+                </div>
+                <!-- buttin -->
+                <div class="card-actions">
+                  <button
+                    onclick="calculationTruangleArea()"
+                    class="btn btn-primary w-full"
+                  >
+                    calculation
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Rectangle card -->
+            <div class="card card-compact w-56 bg-base-100 shadow-xl ">
+              <figure>
+                <img
+                  src="./geometry-genius-resources/images/rectangle.png"
+                  alt="Rectangle"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Rectangle</h2>
+                <p class="text-center">Area (A) = w x l</p>
+                
+                <div>
+                  <!-- width -->
+<input class="w-16 p-2 rounded-md" type="text" name="" id="rectangleWidth" placeholder="w"> <span>cm</span>
+<!-- length -->
+<input class="w-16 p-2 rounded-md" type="text" name="" id="rectangleLength" placeholder="l"> <span>cm</span>
+
+                </div>
+<!-- calculation result  -->
+                <div>
+                  <p>Area: <span id="rectangleAreaResult"></span> <span>cm</span><sup>2</sup></p>
+                </div>
+<!-- buttom -->
+                <div class="card-actions">
+                  <button onclick="calculationRectangleArea()" class="btn btn-primary w-full">Calculation</button>
+                </div>
+              </div>
+            </div>
+            <!-- Parallelogram card -->
+            <div class="card card-compact w-56 bg-base-100 shadow-xl ">
+              <figure>
+                <img
+                  src="./geometry-genius-resources/images/parallelogram.png"
+                  alt="parallelogram"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Parallelogram</h2>
+                <p class="text-center">Area (A) = bxh</p>
+                
+                <div>
+                  <!-- base -->
+<input class="w-16 p-2 rounded-md" type="text" name="" id="parallelogramBase" placeholder="b"> <span>cm</span>
+<!-- hight -->
+<input class="w-16 p-2 rounded-md" type="text" name="" id="parallelogramHight" placeholder="h"> <span>cm</span>
+                </div>
+<!-- calculation result  -->
+                <div>
+                  <p>Area: <span id="parallelogramAreaResult"></span> <span>cm</span><sup>2</sup></p>
+                </div>
+<!-- buttom -->
+                <div class="card-actions">
+                  <button onclick="calculationParallelogramArea()" class="btn btn-primary w-full">Calculation</button>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+          <!-- area calculation container  -->
+          <div class="w-86 border-2 border-gray-700 rounded-md">
+            <h3 class="text-2xl text-center p-4">Area Calculation</h3>
+          </div>
+        </div>
+      </body>
+
+      <footer></footer>
     </main>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
